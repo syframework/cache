@@ -43,7 +43,7 @@ class SimpleCacheTest extends \PHPUnit\Framework\TestCase {
 
 	public function testClear() {
 		$this->assertTrue($this->cache->clear());
-		$this->assertDirectoryNotExists(__DIR__ . '/cache');
+		$this->assertDirectoryDoesNotExist(__DIR__ . '/cache');
 	}
 
 	public function testHas() {
