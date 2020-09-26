@@ -1,4 +1,4 @@
-# SyCache
+# cache
 
 Simple caching library.
 
