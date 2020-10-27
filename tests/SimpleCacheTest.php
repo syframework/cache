@@ -78,4 +78,15 @@ class SimpleCacheTest extends \PHPUnit\Framework\TestCase {
 		$this->cache->getMultiple(null);
 	}
 
+	public function testArray() {
+		$this->assertTrue($this->cache->set('array', ['one', 'two', 'three']));
+		$this->assertEquals($this->cache->get('array'), ['one', 'two', 'three']);
+	}
+
+	public function testObject() {
+		$object = new stdClass();
+		$this->assertTrue($this->cache->set('object', $object));
+		$this->assertEquals($this->cache->get('object'), $object);
+	}
+
 }
